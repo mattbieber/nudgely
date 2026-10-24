@@ -1,7 +1,7 @@
-import { createAuth } from "@my-better-t-app/auth";
-import { createDb } from "@my-better-t-app/db";
+import { createAuth } from '@nudgely/auth'
+import { createDb } from '@nudgely/db'
 
-import { ENV } from "./env.server";
+import { ENV } from './env.server'
 
-export const db = createDb(ENV);
-export const auth = createAuth(ENV, db);
+export const db = createDb(ENV)
+export const auth = createAuth(ENV, db)

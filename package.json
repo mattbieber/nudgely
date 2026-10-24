@@ -1,57 +1,57 @@
 {
-  "name": "my-better-t-app",
-  "private": true,
-  "workspaces": [
-    "apps/*",
-    "packages/*"
-  ],
-  "type": "module",
-  "scripts": {
-    "dev": "turbo run dev",
-    "build": "turbo run build",
-    "check-types": "turbo run check-types",
-    "dev:web": "turbo run dev -F web --",
-    "dev:server": "turbo run dev -F server --",
-    "db:push": "turbo run db:push -F @my-better-t-app/db --",
-    "db:studio": "turbo run db:studio -F @my-better-t-app/db --",
-    "db:generate": "turbo run db:generate -F @my-better-t-app/db --",
-    "db:migrate": "turbo run db:migrate -F @my-better-t-app/db --",
-    "deploy:setup": "pnpm dlx vercel link",
-    "dev:vercel": "pnpm dlx vercel dev -L",
-    "env:preview": "tsx scripts/sync-vercel-env.ts preview",
-    "env:production": "tsx scripts/sync-vercel-env.ts production",
-    "deploy": "pnpm dlx vercel deploy",
-    "deploy:prod": "pnpm dlx vercel deploy --prod",
-    "deploy:check": "pnpm dlx vercel deploy --dry",
-    "env:generate": "varlock codegen --path ./apps/web/ && varlock codegen --path ./apps/server/ && varlock codegen --path ./packages/db/",
-    "postinstall": "varlock codegen --path ./apps/web/ && varlock codegen --path ./apps/server/ && varlock codegen --path ./packages/db/",
-    "auth:generate": "cd apps/server && pnpm run auth:generate",
-    "check": "oxlint && oxfmt --write",
-    "prepare": "husky"
-  },
-  "dependencies": {
-    "zod": "catalog:"
-  },
-  "devDependencies": {
-    "@my-better-t-app/config": "workspace:*",
-    "@types/node": "catalog:",
-    "husky": "^9.1.7",
-    "lint-staged": "^17.6.0",
-    "oxfmt": "^0.72.0",
-    "oxlint": "^1.87.0",
-    "tsx": "catalog:",
-    "turbo": "^2.11.7",
-    "typescript": "catalog:",
-    "varlock": "catalog:"
-  },
-  "lint-staged": {
-    "*": [
-      "oxlint",
-      "oxfmt --write"
-    ]
-  },
-  "packageManager": "pnpm@12.5.1",
-  "varlock": {
-    "loadPath": "./apps/server/"
-  }
+    "name": "nudgely",
+    "private": true,
+    "workspaces": [
+        "apps/*",
+        "packages/*"
+    ],
+    "type": "module",
+    "scripts": {
+        "dev": "turbo run dev",
+        "build": "turbo run build",
+        "check-types": "turbo run check-types",
+        "dev:web": "turbo run dev -F web --",
+        "dev:server": "turbo run dev -F server --",
+        "db:push": "turbo run db:push -F @nudgely/db --",
+        "db:studio": "turbo run db:studio -F @nudgely/db --",
+        "db:generate": "turbo run db:generate -F @nudgely/db --",
+        "db:migrate": "turbo run db:migrate -F @nudgely/db --",
+        "deploy:setup": "pnpm dlx vercel link",
+        "dev:vercel": "pnpm dlx vercel dev -L",
+        "env:preview": "tsx scripts/sync-vercel-env.ts preview",
+        "env:prodpuction": "tsx scripts/sync-vercel-env.ts production",
+        "deploy": "pnpm dlx vercel deploy",
+        "deploy:prod": "pnpm dlx vercel deploy --prod",
+        "deploy:check": "pnpm dlx vercel deploy --dry",
+        "env:generate": "varlock codegen --path ./apps/web/ && varlock codegen --path ./apps/server/ && varlock codegen --path ./packages/db/",
+        "postinstall": "varlock codegen --path ./apps/web/ && varlock codegen --path ./apps/server/ && varlock codegen --path ./packages/db/",
+        "auth:generate": "cd apps/server && pnpm run auth:generate",
+        "check": "oxlint && oxfmt --write",
+        "prepare": "husky"
+    },
+    "dependencies": {
+        "zod": "catalog:"
+    },
+    "devDependencies": {
+        "@nudgely/config": "workspace:*",
+        "@types/node": "catalog:",
+        "husky": "^9.1.7",
+        "lint-staged": "^17.6.0",
+        "oxfmt": "^0.72.0",
+        "oxlint": "^1.87.0",
+        "tsx": "catalog:",
+        "turbo": "^2.11.7",
+        "typescript": "catalog:",
+        "varlock": "catalog:"
+    },
+    "lint-staged": {
+        "*": [
+            "oxlint",
+            "oxfmt --write"
+        ]
+    },
+    "packageManager": "pnpm@12.5.1",
+    "varlock": {
+        "loadPath": "./apps/server/"
+    }
 }

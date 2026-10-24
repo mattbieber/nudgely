@@ -1,4 +1,4 @@
-# my-better-t-app
+# nudgely
 
 This project was created with [Better-T-Stack](https://github.com/AmanVarshney01/create-better-t-stack), a modern TypeScript stack that combines Next.js, Hono, TRPC, and more.
 
@@ -67,7 +67,7 @@ npx shadcn@latest add accordion dialog popover sheet table -c packages/ui
 Import shared components like this:
 
 ```tsx
-import { Button } from "@my-better-t-app/ui/components/button";
+import { Button } from '@nudgely/ui/components/button'
 ```
 
 ### Add app-specific blocks
@@ -111,7 +111,7 @@ For more details, see the guide on [Deploying to Vercel](https://www.better-t-st
 ## Project Structure
 
 ```
-my-better-t-app/
+nudgely/
 ├── apps/
 │   ├── web/         # Frontend application (Next.js)
 │   └── server/      # Backend API (Hono, TRPC)

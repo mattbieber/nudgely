@@ -1,3 +1,10 @@
 {
-  "ignorePatterns": []
+    "ignorePatterns": [],
+    "sortImports": true,
+    "tabWidth": 4,
+    "semi": false,
+    "singleQuote": true,
+    "trailingComma": "all",
+    "sortTailwindcss": true,
+    "sortPackageJson": true
 }
